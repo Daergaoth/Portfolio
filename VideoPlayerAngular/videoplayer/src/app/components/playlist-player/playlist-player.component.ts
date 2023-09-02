@@ -37,38 +37,26 @@ export class PlaylistPlayerComponent implements OnInit, OnDestroy, AfterViewInit
     cursor: 'none'
   };
   showcaseStyle = {
-    cursor: 'default',
-    height: '100%',
-    width: '100%'
+    cursor: 'default'
   };
 
   currentTime: number = 0;
 
-  /*videoContainerStyle = {
+  videoContainerStyle = {
     height: window.innerHeight.toFixed(0) + 'px',
     width: window.innerWidth.toFixed(0) + 'px'
-  };*/
-  videoContainerStyle = {
-    height: '100%',
-    width: '100%'
   };
 
   /*videoPlayerStyle = {
     'min-height': window.innerHeight.toFixed(0) + 'px',
-    'min-width': window.innerWidth.toFixed(0) + 'px',
-    'max-height': window.innerHeight.toFixed(0) + 'px',
-    'max-width': window.innerWidth.toFixed(0) + 'px',
-    'height': window.innerHeight.toFixed(0) + 'px',
-    'width': window.innerWidth.toFixed(0) + 'px'
+    'min-width': window.innerWidth.toFixed(0) + 'px'
   };*/
 
   videoPlayerStyle = {
-    'min-height': '100%',
-    'min-width': '100%',
-    'max-height': '100%',
-    'max-width': '100%',
-    'height': '100%',
-    'width': '100%'
+    'height': '95vh',
+    'width': '100vw',
+    'position': 'fixed',
+    'object-fit': 'cover'
   };
 
   constructor(private layoutService: LayoutService,
@@ -114,29 +102,20 @@ export class PlaylistPlayerComponent implements OnInit, OnDestroy, AfterViewInit
 
   ngAfterViewInit() {
     this.http.updatePlaylist(this.playlist.id, this.videoIdFromRoute).subscribe();
-    if(this.fullscreen){
-      this.videoContainerStyle = {
-        height: screen.height + 'px',
-        width: screen.width + 'px'
-      };
-    }else{
-      this.videoContainerStyle = {
-        height: '100%',
-        width: '100%'
-      };
-    }
-    /*this.videoContainerStyle = {
+    this.videoContainerStyle = {
       height: screen.height * 0.9 + 'px',
       width: screen.width + 'px'
-    };*/
+    };
 
-    this.videoPlayerStyle = {
+    /*this.videoPlayerStyle = {
       'min-height': screen.height * 0.9 + 'px',
-      'min-width': screen.width + 'px',
-      'max-height': screen.height * 0.9 + 'px',
-      'max-width': screen.width + 'px',
-      'height': screen.height * 0.9 + 'px',
-      'width': screen.width + 'px'
+      'min-width': screen.width + 'px'
+    };*/
+    this.videoPlayerStyle = {
+      'height': '100vh',
+      'width': '100vw',
+      'position': 'fixed',
+      'object-fit': 'cover'
     };
     const video: HTMLVideoElement = document.getElementById('videoPlayer') as HTMLVideoElement;
 
@@ -232,16 +211,12 @@ export class PlaylistPlayerComponent implements OnInit, OnDestroy, AfterViewInit
     this.showCase = document.getElementById('sessionOne') as HTMLElement;
     this.showCase.onmousemove = () => {
       this.showcaseStyle = {
-        cursor: 'default',
-        height: '100%',
-        width: '100%'
+        cursor: 'default'
       };
       clearTimeout(this.timer);
       this.timer = setTimeout(() => {
         this.showcaseStyle = {
-          cursor: 'none',
-          height: '100%',
-          width: '100%'
+          cursor: 'none'
         };
       }, 2000);
     };
@@ -339,37 +314,55 @@ export class PlaylistPlayerComponent implements OnInit, OnDestroy, AfterViewInit
       if (page.requestFullscreen) {
         page.requestFullscreen();
       }
-      /*this.videoContainerStyle = {
+      this.videoContainerStyle = {
         height: '100%',
         width: '100%'
       };
 
-      this.videoPlayerStyle = {
-        'min-height': '100vh',
-        'min-width': '100vw',
-        'max-height': '100vh',
-        'max-width': '100vw',
-        'height': '100vh',
-        'width': '100vw'
+      /*this.videoPlayerStyle = {
+        'min-height': '100%',
+        'min-width': '100%'
       };*/
+
+      this.videoPlayerStyle = {
+        'height': '100vh',
+        'width': '100vw',
+        'position': 'fixed',
+        'object-fit': 'cover'
+      };
+
+      /*
+      * width: 100vw;
+    height: 100vh;
+    position: fixed;
+    object-fit: cover;
+      *
+      * */
     } else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
       }
 
-      /*this.videoContainerStyle = {
+      this.videoContainerStyle = {
+        /*height: window.innerHeight.toFixed(0) + 'px',
+        width: window.innerWidth.toFixed(0) + 'px'*/
         height: screen.height * 0.9 + 'px',
         width: screen.width + 'px'
-      };*/
+      };
 
-      /*this.videoPlayerStyle = {
-        'min-height': screen.height * 0.9 + 'px',
-        'min-width': screen.width + 'px',
-        'max-height': screen.height * 0.9 + 'px',
-        'max-width': screen.width + 'px',
-        'height': screen.height * 0.9 + 'px',
-        'width': screen.width + 'px'
-      };*/
+      /*this.videoPlayerStyle = {*/
+      /*'min-height': window.innerHeight.toFixed(0) + 'px',
+      'min-width': window.innerWidth.toFixed(0) + 'px'*/
+      /*'min-height': screen.height * 0.9 + 'px',
+      'min-width': screen.width + 'px'
+    };*/
+
+      this.videoPlayerStyle = {
+        'height': '100vh',
+        'width': '100vw',
+        'position': 'fixed',
+        'object-fit': 'cover'
+      };
     }
   }
   changeCurrentTime(video: HTMLVideoElement, value: number) {

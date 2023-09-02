@@ -9,18 +9,21 @@ import { LayoutService } from 'src/app/services/layout.service';
 export class VideoPlayerLayoutComponent implements OnInit {
   @Input() title = 'No Title';
   @Input() videoLength = 0;
+  /*buttonText = 'pause';*/
+  fullScrrenButtonText = 'fullscreen';
   @Input() fullscreenState = false;
   isPlaying = true;
   isSubtitle = false;
   @Input() volume = 0;
+  isMuted = false;
   showSliderVariable = false;
   timer: any;
   layoutContainer: any;
   layoutContainerStyle = {
-    'color': 'transparent',
-    'cursor': 'none',
-    'background-color': 'transparent'
+    color: 'transparent',
+    cursor: 'none'
   };
+  /*subtitleText = 'subtitles';*/
 
 
   constructor(private layoutService: LayoutService) { }
@@ -47,16 +50,14 @@ export class VideoPlayerLayoutComponent implements OnInit {
     this.layoutContainer = document.getElementById('layoutContainer');
     this.layoutContainer.onmousemove = () => {
       this.layoutContainerStyle = {
-        'color': 'red',
-        'cursor': 'default',
-        'background-color': 'transparent'
+        color: 'red',
+        cursor: 'default'
       };
       clearTimeout(this.timer);
       this.timer = setTimeout(() => {
         this.layoutContainerStyle = {
-          'color': 'transparent',
-          'cursor': 'none',
-          'background-color': 'transparent'
+          color: 'transparent',
+          cursor: 'none'
         };
       }, 2000);
     };
