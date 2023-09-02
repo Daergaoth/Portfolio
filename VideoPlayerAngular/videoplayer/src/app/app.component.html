@@ -1,0 +1,9 @@
+<mat-toolbar [ngStyle]="navbarStyle" color="primary" class="navbar">
+  <div routerLink="/home" class="navbarlink">Home Usage</div>
+  <div>
+    <span routerLink="/home" class="navbarlink">Home</span>
+    <span class="navbarlink" (click)="refreshDatabase()">Update</span>
+    <span class="navbarlink" (click)="shutdownServer()">Shutdown</span>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

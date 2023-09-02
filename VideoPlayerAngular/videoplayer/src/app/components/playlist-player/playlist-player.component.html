@@ -1,0 +1,16 @@
+<section [ngStyle]="showcaseStyle" class="showcase" id="sessionOne">
+  <div [ngStyle]="videoContainerStyle" class="video-container">
+    <video [ngStyle]="videoPlayerStyle" id="videoPlayer" preload="none" poster="assets/loading-gif.gif">
+      <source [src]="videoURL" type="video/webm" />
+      <source [src]="videoURL" type="video/mp4" />
+      <source [src]="videoURL" type="video/ogg" />
+    </video>
+  </div>
+  <div class="content" id="layoutElement" [ngStyle]="layoutStyle">
+    <div class="controlLine" id="title">
+      <app-video-player-layout [fullscreenState]="fullscreen" [videoLength]="videoLength" [volume]="volume" [title]="title"></app-video-player-layout>
+      <app-progress-slider [videoLength]="videoLength"></app-progress-slider>
+      <div class="subtitleDiv" *ngFor="let item of currentlyActiveSubtitleElements">{{item}}</div>
+    </div>
+  </div>
+</section>

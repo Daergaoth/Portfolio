@@ -1,0 +1,8 @@
+
+#progressField{
+  visibility: hidden;
+}
+
+#progressField :hover {
+  visibility: visible;
+}

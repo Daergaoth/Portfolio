@@ -1,0 +1,12 @@
+mat-table {
+  width: 100%;
+}
+
+.mat-elevation-z8 {
+  margin: 20px auto;
+  width: 90%;
+}
+
+.link {
+  cursor: pointer;
+}

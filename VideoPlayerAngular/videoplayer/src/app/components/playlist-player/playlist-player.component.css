@@ -1,0 +1,91 @@
+:root {
+  --primary-color: #3a4052
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.showcase {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.content {
+  height: 720px;
+  width: 1280px;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  z-index: 10;
+}
+
+#videoPlayer {
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#title {
+  height: 50px;
+}
+
+.controlButton {
+  cursor: pointer;
+}
+
+.controlLine {
+  font-size: 40px;
+}
+
+#timeInput {
+  width: 155px;
+  background-color: transparent;
+  color: red;
+  border: none;
+  outline: none;
+  height: 30px;
+  transition: height 1s;
+  -webkit-transition: height 1s;
+  font-size: 40px;
+}
+
+#timeInput :hover {
+  color: red;
+}
+
+#timeInput :focus {
+  height: 50px;
+  font-size: 40px;
+  color: red;
+}
+
+::cue {}
+
+.subtitleDiv {
+  font-size: 36px;
+  color: white;
+  background-color: rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-top: 20px;
+  line-height: 1;
+}

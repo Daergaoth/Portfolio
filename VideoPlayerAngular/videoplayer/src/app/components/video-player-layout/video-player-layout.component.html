@@ -1,0 +1,30 @@
+<div id="container" id="layoutContainer" [ngStyle]="layoutContainerStyle">
+  <div id="title">{{title}} - {{(volume * 100).toFixed(0)}}%</div>
+  <div id="middleContainer">
+    <div id="playPrevious" class="hoverClass" (click)="playPrevious()">
+      <mat-icon [inline]="true">skip_previous</mat-icon>
+    </div>
+    <div id="middleElement">
+      <app-progress [videoLength]="videoLength"></app-progress>
+    </div>
+    <div id="playNext" class="hoverClass" (click)="playNext()">
+      <mat-icon [inline]="true">skip_next</mat-icon>
+    </div>
+  </div>
+  <div class="controlButtons">
+    <mat-icon [inline]="true" (click)="home()" class="controlButtonFirst">exit_to_app</mat-icon>
+    <mat-icon [inline]="true" (click)="changeVolume()" class="controlButton">
+      {{volume === 0 ? 'volume_off' : 'volume_up'}}</mat-icon>
+    <mat-icon [inline]="true" (click)="oneAndHalfEarlier()" class="controlButton">fast_rewind</mat-icon>
+    <mat-icon [inline]="true" (click)="fiveSecEarlier()" class="controlButton">replay_5</mat-icon>
+    <mat-icon [inline]="true" (click)="playButton()" class="controlButton">{{this.isPlaying ? 'pause' : 'play_arrow'}}</mat-icon>
+    <mat-icon [inline]="true" (click)="fiveSecLater()" class="controlButton">forward_5</mat-icon>
+    <mat-icon [inline]="true" (click)="oneAndHalfLater()" class="controlButton">fast_forward</mat-icon>
+    <mat-icon [inline]="true" (click)="subtitle()" class="controlButton">
+      {{isSubtitle ? 'subtitles' : 'video_label'}}</mat-icon>
+    <mat-icon [inline]="true" (click)="showSlider()" class="controlButton">{{showSliderVariable ? 'visibility' : 'visibility_off'}}</mat-icon>
+    <mat-icon [inline]="true" (click)="fullscrren()" class="controlButtonLast">{{fullscreenState ? 'fullscreen_exit' : 'fullscreen'}}</mat-icon>
+  </div>
+
+
+</div>
