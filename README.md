@@ -1,3 +1,5 @@
+Updated on 03. 09. 2023
+
 # Portfolio (Nándor Segyevy)
 A collection of my project I intend to list in my portfolio.
 
@@ -471,5 +473,3 @@ flowchart LR
 >> Note: Step 2 and 3 are used in case the containers were stopped already in a different way and docker-compose down result in fail.
 
 >> Note: Step 4, delete volumes is optional. This will remove the database volume. This means the persisted database data is deleted. Server will perform a fresh start.
-
-Updated on 03. 09. 2023
