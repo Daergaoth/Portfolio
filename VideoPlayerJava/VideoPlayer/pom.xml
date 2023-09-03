@@ -79,6 +79,17 @@
 			<version>3.5.4</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-test</artifactId>
+			<version>3.0.5</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -89,7 +100,7 @@
 				<executions>
 					<execution>
 						<configuration>
-							<mainClass>com.daergaoth.videoplayer.VideoPlayerBackendApplication</mainClass>
+							<mainClass>com.daergaoth.videoplayer.VideoPlayerApplication</mainClass>
 						</configuration>
 					</execution>
 				</executions>

@@ -80,3 +80,6 @@ VideoPlayerJava/VideoPlayer/build/
 ### VS Code ###
 VideoPlayerJava/VideoPlayer/.vscode/
 
+/log.txt
+/out/production/Portfolio/main/resources/application.yaml
+VideoPlayerJava/VideoPlayer/src/main/resources/public
