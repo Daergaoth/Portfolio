@@ -1,0 +1,20 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.daergaoth</groupId>
+    <artifactId>appRoot</artifactId>
+    <version>1.0.0</version>
+
+    <modules>
+        <module>CheckFileContent/CheckFileContent</module>
+        <module>VideoPlayerJava/VideoPlayer</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- declare dependencies which are common to all modules -->
+            <!-- including versionId -->
+        </dependencies>
+    </dependencyManagement>
+
+</project>

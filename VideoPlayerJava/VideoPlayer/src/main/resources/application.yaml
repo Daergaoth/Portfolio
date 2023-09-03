@@ -1,1 +1,51 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/inner_use?&useSSL=false&useJDBCComplaintTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: developer
+    password: test1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 999MB
+      max-request-size: 999MB
+
+server:
+  servlet:
+    encoding:
+      # Charset of HTTP requests and responses. Added to the "Content-Type" header if not set explicitly.
+      charset: UTF-8
+      # Enable http encoding support.
+      enabled: true
+      # Force the encoding to the configured charset on HTTP requests and responses.
+      force: true
+
+logging:
+  level:
+    com.daergaoth: DEBUG
+    org.springframework: ERROR
+    org.hibernate: error
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    path: "C:\\Users\\segye\\Documents\\Java\\innerUsed"
+    name: "log.txt"
+
+cors-policies: http://localhost:4200, http://127.0.0.1:4200, http://127.0.0.1:3000, http://localhost:3000
+#server.port: 8443
+server.port: 8080
+#server.ssl.key-alias: https-example
+#server.ssl.key-store-type: JKS
+#server.ssl.key-store-password: password
+#server.ssl.key-store: classpath:https-example.jks
+
 

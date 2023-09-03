@@ -1,1 +1,82 @@
 /VideoPlayerAngular/workspace/
+/.idea/
+CheckFileContent/CheckFileContent/.idea
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+VideoPlayerAngular/videoplayer/dist
+VideoPlayerAngular/videoplayer/tmp
+VideoPlayerAngular/videoplayer/out-tsc
+VideoPlayerAngular/videoplayer/bazel-out
+
+# Node
+VideoPlayerAngular/videoplayer/node_modules
+VideoPlayerAngular/videoplayer/npm-debug.log
+VideoPlayerAngular/videoplayer/yarn-error.log
+
+# IDEs and editors
+VideoPlayerAngular/videoplayer/.idea/
+VideoPlayerAngular/videoplayer/.project
+VideoPlayerAngular/videoplayer/.classpath
+VideoPlayerAngular/videoplayer/.c9/
+VideoPlayerAngular/videoplayer/*.launch
+VideoPlayerAngular/videoplayer/.settings/
+VideoPlayerAngular/videoplayer/*.sublime-workspace
+
+# Visual Studio Code
+VideoPlayerAngular/videoplayer/.vscode/*
+VideoPlayerAngular/videoplayer/!.vscode/settings.json
+VideoPlayerAngular/videoplayer/!.vscode/tasks.json
+VideoPlayerAngular/videoplayer/!.vscode/launch.json
+VideoPlayerAngular/videoplayer/!.vscode/extensions.json
+VideoPlayerAngular/videoplayer/.history/*
+
+# Miscellaneous
+VideoPlayerAngular/videoplayer/.angular/cache
+VideoPlayerAngular/videoplayer/.sass-cache/
+VideoPlayerAngular/videoplayer/connect.lock
+VideoPlayerAngular/videoplayer/coverage
+VideoPlayerAngular/videoplayer/libpeerconnection.log
+VideoPlayerAngular/videoplayer/testem.log
+VideoPlayerAngular/videoplayer/typings
+
+# System files
+VideoPlayerAngular/videoplayer/.DS_Store
+VideoPlayerAngular/videoplayer/Thumbs.db
+
+
+VideoPlayerJava/VideoPlayer/HELP.md
+VideoPlayerJava/VideoPlayer/target/
+.mvn/wrapper/maven-wrapper.jar
+**/src/main/**/target/
+**/src/test/**/target/
+
+### STS ###
+VideoPlayerJava/VideoPlayer/.apt_generated
+VideoPlayerJava/VideoPlayer/.classpath
+VideoPlayerJava/VideoPlayer/.factorypath
+VideoPlayerJava/VideoPlayer/.project
+VideoPlayerJava/VideoPlayer/.settings
+VideoPlayerJava/VideoPlayer/.springBeans
+VideoPlayerJava/VideoPlayer/.sts4-cache
+
+### IntelliJ IDEA ###
+VideoPlayerJava/VideoPlayer/.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+VideoPlayerJava/VideoPlayer/nbproject/private/
+VideoPlayerJava/VideoPlayer/nbbuild/
+VideoPlayerJava/VideoPlayer/dist/
+VideoPlayerJava/VideoPlayer/nbdist/
+VideoPlayerJava/VideoPlayer/.nb-gradle/
+VideoPlayerJava/VideoPlayer/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+VideoPlayerJava/VideoPlayer/.vscode/
+

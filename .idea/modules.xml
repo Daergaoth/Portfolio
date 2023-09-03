@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Portfolio.iml" filepath="$PROJECT_DIR$/.idea/Portfolio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VideoPlayerJava/VideoPlayer/VideoPlayer.iml" filepath="$PROJECT_DIR$/VideoPlayerJava/VideoPlayer/VideoPlayer.iml" />
     </modules>
   </component>
 </project>

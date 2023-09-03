@@ -6,6 +6,7 @@ import { InnerService } from 'src/app/services/inner.service';
 import { LayoutService } from 'src/app/services/layout.service';
 import { PlaylistModel } from 'src/app/models/playlistmodel';
 import { PlaylistService } from 'src/app/services/playlist.service';
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-playlist-player',
@@ -83,7 +84,7 @@ export class PlaylistPlayerComponent implements OnInit, OnDestroy, AfterViewInit
           video.currentTime = value;
         }});
 
-      this.videoURL = 'http://localhost:8080/video/stream/' + this.videoIdFromRoute;
+      this.videoURL = environment.BASE_URL + '/video/stream/' + this.videoIdFromRoute;
       this.innerService.isPlaying.next(true);
     }
   }
