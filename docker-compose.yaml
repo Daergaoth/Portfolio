@@ -37,7 +37,7 @@ services:
       - D:\Torrent:/var/video/root
     ports:
       - "8080:8080"
-    restart: always
+    restart: on-failure
     environment:
       SPRING_APPLICATION_JSON: '{
             "spring.datasource.url"  : "jdbc:mysql://db:3306/inner_use?&useSSL=false&useJDBCComplaintTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true",
