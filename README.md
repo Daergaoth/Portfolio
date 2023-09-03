@@ -1,4 +1,4 @@
-Updated on 03. 09. 2023
+Updated on 04. 09. 2023
 
 # Portfolio (Nándor Segyevy)
 A collection of my project I intend to list in my portfolio.
