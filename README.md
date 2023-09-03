@@ -324,6 +324,10 @@ Server is a classic REST API with Controller - Service - Repository levels.
 <li>Video</li>
 </ol>
 
+> Visualization:
+
+![database.png](database.png)
+
 ### <a name="2_2"></a>2.2 Rest API Entry Points
 
 #### <a name="2_2_1"></a>2.2.1 Folder Controller
