@@ -61,7 +61,6 @@ export class PlaylistListComponent implements OnInit, AfterViewInit {
           this.dataSource = new MatTableDataSource(this.playlistList);
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
-          //this.table.renderRows();
 
         }
       }
