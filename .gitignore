@@ -81,5 +81,8 @@ VideoPlayerJava/VideoPlayer/build/
 VideoPlayerJava/VideoPlayer/.vscode/
 
 /log.txt
+/log.txt.*
 /out/production/Portfolio/main/resources/application.yaml
 VideoPlayerJava/VideoPlayer/src/main/resources/public
+VideoPlayerJava/VideoPlayer/src/test/java/resources/TestFailedScreenshots
+VideoPlayerJava/VideoPlayer/src/test/java/resources/EdgeWebdriver

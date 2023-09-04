@@ -1,0 +1,6 @@
+<selenium-settings>
+    <BrowserType>EDGE</BrowserType>
+    <WebdriverPath>src/test/java/resources/EdgeWebdriver/msedgedriver.exe</WebdriverPath>
+    <HeadlessMode>true</HeadlessMode>
+    <SavePath>src/test/java/resources/TestFailedScreenshots/</SavePath>
+</selenium-settings>
